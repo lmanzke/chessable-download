@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const webpack = require('webpack');
-const ExtensionReloader = require('webpack-extension-reloader');
+const ExtensionReloader = require('webpack-extension-reloader-v3-manifest');
 const { version } = require('./package.json');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -8,6 +8,7 @@ const config = {
   mode: process.env.NODE_ENV,
   context: __dirname + '/src',
   entry: {
+    'chessable/background': './chessable/background.ts',
     'chessable/chessable': './chessable/chessable.ts',
   },
   optimization: {
