@@ -204,9 +204,7 @@ function createMoveTree(spans: HTMLElement[]) {
         moveText = getLetter(pieceImage.dataset.piece) + moveText;
       }
 
-      console.log(moveText);
       moveText = getMoveFromText(moveText);
-      console.log(moveText);
 
       const comment = findComment(span);
 
@@ -340,7 +338,6 @@ const downloadPGN = (openingMoves: Element) => () => {
   const spans = openingMoves.querySelectorAll('span div.whiteMove, span div.blackMove, span.commentInMove');
   const title = document.querySelector('#theOpeningTitle')?.textContent || '';
   const pgn = getPGN(title, createMoveTree(Array.from(spans) as HTMLElement[]));
-  console.log(pgn);
 
   downloadFile(title, pgn);
 }
