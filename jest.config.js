@@ -7,13 +7,7 @@ module.exports = {
   preset: 'ts-jest/presets/js-with-babel',
 
   transform: {
-    '^.+\\.(js|jsx)?$': 'babel-jest',
-  },
-
-  globals: {
-    'ts-jest': {
-      babelConfig: true,
-    },
+    '^.+\\.(js|jsx)?$': ['ts-jest', { babelConfig: true }],
   },
 
   moduleNameMapper: {

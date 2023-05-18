@@ -1,3 +1,5 @@
+import { getMoveFromText } from "@/chessable/utils";
+
 const wait = (ms: number) => new Promise(resolve => {
   setTimeout(resolve, ms);
 })
@@ -81,19 +83,6 @@ function createChild(move: string, currentMove?: Move, comment?: string): Move {
     moveNumber: getMoveNumber(currentMove),
     children: []
   };
-}
-
-const moveRegex = /^(?<move>([a-hBQKNR]*[x]*[a-h]+[1-8]+|0-0-0|0-0)[#+]{0,1})(?<annotation>.*)$/;
-
-const getMoveFromText = (text: string) => {
-  const matches = text.replaceAll('O', '0').match(moveRegex);
-  if (!matches || !matches.groups) {
-    return '';
-  }
-  
-  const { move } = matches.groups;
-
-  return move;
 }
 
 const isElement = (childNode: Node): childNode is HTMLElement => {
@@ -225,15 +214,6 @@ function createMoveTree(spans: HTMLElement[]) {
   }
 
   return moveTree.children;
-}
-
-const convertMove = (move: Move) => {
-  let pgn = '';
-  if (move.color === 'white') {
-    pgn += move.moveNumber + '. ';
-  }
-
-  pgn += move.move + ' ';
 }
 
 const getFormattedDate = (d: Date) => `${d.getFullYear()}.${(d.getMonth() + 1).toString().padStart(2, '0')}.${(d.getDate() + 1).toString().padStart(2, '0')}`;
