@@ -8,7 +8,6 @@ const config = {
   mode: process.env.NODE_ENV,
   context: __dirname + '/src',
   entry: {
-    background: './background.ts',
     'chessable/chessable': './chessable/chessable.ts',
   },
   optimization: {
