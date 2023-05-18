@@ -1,0 +1,48 @@
+{
+  "name": "chessable-download",
+  "version": "1.0.0",
+  "description": "A vanilla javascript extension that allows you to download chessable courses as a PGN",
+  "author": "Lucas Manzke",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint": "eslint --ext .js,.ts src",
+    "lint-fix": "eslint --fix --ext .js,.ts src",
+    "build-zip": "node scripts/build-zip.ts",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "prettier": "prettier \"src/**/*.{js,vue}\"",
+    "prettier:write": "npm run prettier -- --write",
+    "test": "jest",
+    "watch": "npm run build -- --watch",
+    "watch:dev": "cross-env HMR=true npm run build:dev -- --watch"
+  },
+  "resolutions": {
+    "webpack-sources": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.21.8"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.21.5",
+    "@typescript-eslint/parser": "^5.59.6",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3.30.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.40.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-extension-reloader": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "license": "MIT"
+}
