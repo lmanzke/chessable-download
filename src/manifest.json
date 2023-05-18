@@ -2,18 +2,18 @@
   "name": "Chessable PGN download",
   "description": "A vanilla javascript extension that allows you to download chessable courses as a PGN",
   "version": "1.0.0",
-  "manifest_version": 2,
-  "browser_action": {
+  "manifest_version": 3,
+  "action": {
     "default_title": "Chessable Download"
   },
   "content_scripts": [
     {
-      "matches": ["*://*.chessable.com/*", "*://chessable.com/*"],
+      "matches": ["://.chessable.com/", "://chessable.com/*"],
       "js": ["chessable/chessable.js"]
     }
   ],
   "permissions": ["storage"],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   }
 }
