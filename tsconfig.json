@@ -13,7 +13,6 @@
     "baseUrl": ".",
     "plugins": [{"name": "typescript-tslint-plugin"}],
     "types": [
-      "webpack-env",
       "jest"
     ],
     "paths": {
