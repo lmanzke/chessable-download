@@ -267,39 +267,6 @@ const getPGN = (courseName: string, moveList: Move[]) => {
   return metaText + "\n\n" + convertMoves(moveList) + ' *'
 }
 
-const tree: Move[] = [
-  {
-    move: 'e4',
-    color: 'white',
-    comment: '',
-    children: [
-      {
-        move: 'c5',
-        color: 'black',
-        comment: '',
-        children: [],
-        moveNumber: 1,
-      },
-    ],
-    moveNumber: 1,
-  },
-  {  
-    move: 'd4',
-    color: 'white',
-    comment: '',
-    children: [
-      {
-        move: 'c5',
-        color: 'black',
-        comment: '',
-        children: [],
-        moveNumber: 1,
-      },
-    ],
-    moveNumber: 1,
-  }
-];
-
 const toFileName = (s: string) => s.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.pgn';
 
 function downloadFile(title: string, content: string) {
