@@ -1379,7 +1379,7 @@
 
 "@types/jest@^29.5.1":
   version "29.5.1"
-  resolved "https://pkgs.dev.azure.com/napdigital/NegoManager/_packaging/npmregistry/npm/registry/@types/jest/-/jest-29.5.1.tgz#83c818aa9a87da27d6da85d3378e5a34d2f31a47"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.1.tgz#83c818aa9a87da27d6da85d3378e5a34d2f31a47"
   integrity sha1-g8gYqpqH2ifW2oXTN45aNNLzGkc=
   dependencies:
     expect "^29.0.0"
@@ -1904,7 +1904,7 @@ browserslist@^4.21.3, browserslist@^4.21.5:
 
 bs-logger@0.x:
   version "0.2.6"
-  resolved "https://pkgs.dev.azure.com/napdigital/NegoManager/_packaging/npmregistry/npm/registry/bs-logger/-/bs-logger-0.2.6.tgz#eb7d365307a72cf974cc6cda76b68354ad336bd8"
+  resolved "https://registry.yarnpkg.com/bs-logger/-/bs-logger-0.2.6.tgz#eb7d365307a72cf974cc6cda76b68354ad336bd8"
   integrity sha1-6302UwenLPl0zGzadraDVK0za9g=
   dependencies:
     fast-json-stable-stringify "2.x"
@@ -1923,7 +1923,7 @@ buffer-from@^1.0.0:
 
 bun-types@^0.5.0:
   version "0.5.8"
-  resolved "https://pkgs.dev.azure.com/napdigital/NegoManager/_packaging/npmregistry/npm/registry/bun-types/-/bun-types-0.5.8.tgz#953722062116e0b87ce00e4e4cc807673926b834"
+  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-0.5.8.tgz#953722062116e0b87ce00e4e4cc807673926b834"
   integrity sha1-lTciBiEW4Lh84A5OTMgHZzkmuDQ=
 
 callsites@^3.0.0:
@@ -3263,7 +3263,7 @@ lodash.debounce@^4.0.8:
 
 lodash.memoize@4.x:
   version "4.1.2"
-  resolved "https://pkgs.dev.azure.com/napdigital/NegoManager/_packaging/npmregistry/npm/registry/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
+  resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
 lodash.merge@^4.6.2:
@@ -3307,7 +3307,7 @@ make-dir@^3.0.0, make-dir@^3.0.2:
 
 make-error@1.x:
   version "1.3.6"
-  resolved "https://pkgs.dev.azure.com/napdigital/NegoManager/_packaging/npmregistry/npm/registry/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
+  resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha1-LrLjfqm2fEiR9oShOUeZr0hM96I=
 
 makeerror@1.0.12:
@@ -3954,7 +3954,7 @@ to-regex-range@^5.0.1:
 
 ts-jest@^29.1.0:
   version "29.1.0"
-  resolved "https://pkgs.dev.azure.com/napdigital/NegoManager/_packaging/npmregistry/npm/registry/ts-jest/-/ts-jest-29.1.0.tgz#4a9db4104a49b76d2b368ea775b6c9535c603891"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-29.1.0.tgz#4a9db4104a49b76d2b368ea775b6c9535c603891"
   integrity sha1-Sp20EEpJt20rNo6ndbbJU1xgOJE=
   dependencies:
     bs-logger "0.x"
