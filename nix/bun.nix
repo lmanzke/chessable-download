@@ -12,7 +12,7 @@
 }:
 
 stdenvNoCC.mkDerivation rec {
-  version = "0.6.2";
+  version = "0.6.5";
   pname = "bun";
 
   src = passthru.sources.${stdenvNoCC.hostPlatform.system} or (throw "Unsupported system: ${stdenvNoCC.hostPlatform.system}");
@@ -45,7 +45,7 @@ stdenvNoCC.mkDerivation rec {
       };
       "x86_64-linux" = fetchurl {
         url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64.zip";
-        sha256 = "697673331b2690589982f2efea866eadbe2573a476fd2989e8641a655fe408bc";
+        sha256 = "Coz+NyX6YBS6NEzzcXoVa9ArBJxD7LhxpT+2Q1rNmYs=";
       };
     };
     updateScript = writeShellScript "update-bun" ''
