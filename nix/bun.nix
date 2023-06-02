@@ -33,7 +33,7 @@ stdenvNoCC.mkDerivation rec {
     sources = {
       "aarch64-darwin" = fetchurl {
         url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-darwin-aarch64.zip";
-        sha256 = "nkXTyJMvGMBz1xiWudLSwl+s7gb750g1oYTvPoY+o0M=";
+        sha256 = "NZU2C1zve8nBTKhk3DpeuEL4aY9Qk+3UnGzH6F7i0hY=";
       };
       "aarch64-linux" = fetchurl {
         url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-aarch64.zip";

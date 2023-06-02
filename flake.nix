@@ -5,19 +5,27 @@
     };
     outputs = { self, nixpkgs, ... }:
     let
-        system = "x86_64-linux";
-        pkgs = import nixpkgs { inherit system; };
-        bun-0_6_2 = pkgs.callPackage nix/bun.nix {};
+        linux = "x86_64-linux";
+        mac = "aarch64-darwin";
+        pkgs = import nixpkgs { system = linux; };
+        pkgs-darwin = import nixpkgs { system = mac; };
+        bun = pkgs.callPackage nix/bun.nix {};
+        bun-darwin = pkgs-darwin.callPackage nix/bun.nix {};
     in
     {
-        defaultPackage.${system} = pkgs.mkShell {
-            packages = [
-                bun-0_6_2
-                pkgs.niv
-                pkgs.bun
-                pkgs.nodejs_20
-                pkgs.yarn
-            ]; 
+        defaultPackage.${linux} = pkgs.mkShell {
+            packages = with pkgs; [
+                bun
+                nodejs_20
+                yarn
+            ];
+        };
+        defaultPackage.${mac} = pkgs-darwin.mkShell {
+            packages = with pkgs-darwin; [
+                bun-darwin
+                nodejs_20
+                yarn
+            ];
         };
     };
 }
